@@ -12,6 +12,7 @@ at1edxmahkpszrm9sxll4zmg2pwjsw73k93rp6khngewa5rn8y8fvrsuzcm6z
 
 # Description
 For me to successfully work on the above project to the stage of deploy I follow the below steps
+Install rust on your pc
 1. Clone Leo Project to my local machine by copying the git URL and running
 `git clone https://leo-project`
 
@@ -45,4 +46,36 @@ For me to successfully work on the above project to the stage of deploy I follow
 There was a prompt and typed y and it was successfully deployed.
 
 
+Workshop 2
+Transaction ID: https://testnet.aleoscan.io/transaction?id=at19c9xlhgp6sqvs0s2cf7fdw3yr4kjwg4mhkzns40ntgnwyev7xvys67r66a
 
+Steps
+Install rust on your pc
+clone the leo repo from their official github page
+cd leo
+cargo install --path . to install the dependencies
+leo new newproject
+Note: the name of your project must be in lowercase
+cd newproject
+change the PRIVATE_KEY in your .env file to yours
+leo run mint yourwalletaddress 1000u64 --network testnet
+leo run transfer "token" youraddress 100u64 --network testnet
+leo deploy
+
+
+
+Workshop 3
+Transaction ID: https://testnet.aleoscan.io/transaction?id=at1fp7kmn9l6uwvuza6wswuulnpzd264qrhc3e356p5lkkwpr5905pssrfxym
+
+Steps
+Install rust on your pc
+clone the leo repo from their official github page
+cd leo
+cargo install --path . to install the dependencies
+leo new newproject
+Note: the name of your project must be in lowercase
+cd newproject
+change the PRIVATE_KEY in your .env file to yours
+leo run combine_hash_owner_reciever youraddress party2address
+leo run
+leo deploy
